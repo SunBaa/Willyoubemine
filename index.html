@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Special</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Page 1: Welcome -->
+        <div id="page1" class="page active">
+            <h1>Valentine's day is coming My Dummy! ❤️</h1>
+            <p>And I have some questions for you...</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN0astw_OVVmaWHqrPLLWN36eNr9eEH1rJIQ&s" alt="Cute Cat" class="cat-image">
+            <button onclick="nextPage(2)">Start</button>
+        </div>
+
+        <!-- Page 2: Question 1 -->
+        <div id="page2" class="page">
+            <h1>Question 1</h1>
+            <p>Do you love me as much as I love you?</p>
+            <img src="https://i.pinimg.com/736x/4e/09/37/4e09375f76be3c80001040dda7db13dc.jpg" alt="Cute Cat" class="cat-image">
+            <button onclick="nextPage(3)">Yes, of course!</button>
+            <button id="denyButton1" onclick="deny(1)">Maybe...</button>
+        </div>
+
+        <!-- Page 3: Response to Yes -->
+        <div id="page3" class="page">
+            <h1>Yay! ❤️</h1>
+            <p>I knew it! You're the best!</p>
+            <img src="https://img.freepik.com/premium-photo/cute-cat-jumping-transparent-isolated-background-ai_866663-11416.jpg" alt="Cute Cat" class="cat-image">
+            <button onclick="nextPage(5)">Next Question</button>
+        </div>
+
+        <!-- Page 4: Response to Maybe -->
+        <div id="page4" class="page">
+            <h1>Hmm... 🤔</h1>
+            <p>I'll have to try harder to win your heart!</p>
+            <img src="https://i.pinimg.com/736x/d6/16/5e/d6165eedf06675576a562dc68ddbbd65.jpg" alt="Cute Cat" class="cat-image">
+            <button onclick="nextPage(5)">Next Question</button>
+        </div>
+
+        <!-- Page 5: Question 2 -->
+        <div id="page5" class="page">
+            <h1>Question 2</h1>
+            <p>Will you be my Valentine forever?</p>
+            <img src="https://i.pinimg.com/736x/d6/16/5e/d6165eedf06675576a562dc68ddbbd65.jpg" alt="Cute Cat" class="cat-image">
+            <button onclick="nextPage(6)">Yes, forever and always!</button>
+            <button id="denyButton2" onclick="deny(2)">Let's see...</button>
+        </div>
+
+        <!-- Page 6: Response to Yes -->
+        <div id="page6" class="page">
+            <h1>You made my day! 🌹</h1>
+            <p>I love you more than words can express!</p>
+            <img src="https://i.pinimg.com/736x/be/e0/66/bee066141d034c7949217841e615c73a.jpg" alt="Cute Cat" class="cat-image">
+            <button onclick="nextPage(8)">Next Question</button>
+        </div>
+
+        <!-- Page 7: Response to Let's See -->
+        <div id="page7" class="page">
+            <h1>I'll wait for you! ⏳</h1>
+            <p>No matter how long it takes, I'll always love you!</p>
+            <img src="https://www.reddit.com/media?url=https%3A%2F%2Fexternal-preview.redd.it%2FxMYfw5_i5da86CMaJmuQpAvQeJFZtZ9N3eWXyMrWUX8.jpg%3Fauto%3Dwebp%26s%3D6b5daea5c32de67356b6b183e2a9f3d0765b7ce2" alt="Cute Cat" class="cat-image">
+            <button onclick="nextPage(8)">Next Question</button>
+        </div>
+
+        <!-- Page 8: Final Question -->
+        <div id="page8" class="page">
+            <h1>Final Question</h1>
+            <p>Will you marry me someday?</p>
+            <img src="https://i.pinimg.com/1200x/f9/14/bd/f914bd4e2c91a8363ecc57846c664e33.jpg" alt="Cute Cat" class="cat-image">
+            <button onclick="nextPage(9)">Yes, I will!</button>
+            <button id="denyButton3" onclick="deny(3)">Let's talk about it...</button>
+        </div>
+
+        <!-- Page 9: Response to Yes -->
+        <div id="page9" class="page">
+            <h1>You've made me the happiest person! 💍</h1>
+            <p>I can't wait to spend the rest of my life with you!</p>
+            <img src="https://i.pinimg.com/736x/a0/37/b1/a037b12b1af17ca5e29b9fd3cb85f299.jpg" alt="Cute Cat" class="cat-image">
+            <button onclick="nextPage(10)">Next</button>
+        </div>
+
+        <!-- Page 10: Response to Let's Talk -->
+        <div id="page10" class="page">
+            <h1>But I understand you hehe... 💬</h1>
+            <p>Let's talk about it when you're ready. I love you!</p>
+            <img src="https://i.pinimg.com/736x/a0/37/b1/a037b12b1af17ca5e29b9fd3cb85f299.jpg" alt="Cute Cat" class="cat-image">
+            <button onclick="nextPage(11)">Next</button>
+        </div> 
+
+        <!-- Page 11: Poem -->
+        <div id="page11" class="page">
+            <h1>So here is a poem for You 💌</h1>
+            <div class="poem">
+                <p>
+                    Roses are red, violets are blue,<br>
+                    Every moment with you feels brand new.<br>
+                    Your smile is my sunshine, your laugh is my song,<br>
+                    With you by my side, I know I belong.<br>
+                    You're my heart, my soul, my everything,<br>
+                    Forever with you is the joy you always bring.<br>
+                </p>
+            </div>
+            <button onclick="nextPage(12)">Next</button>
+        </div>
+
+        <!-- Page 12: Photo Collage -->
+        <div id="page12" class="page">
+            <h1>Our Memories Together 📸</h1>
+            <div class="photo-collage">
+                <div class="photo-container">
+                    <input type="file" id="photoUpload1" accept="image*" onchange="previewImage(event, 1)">
+                    <img id="preview1" src="image/440322794_885248033441096_2229543294524431011_n.jpg" alt="Photo 1">
+                </div>
+                <div class="photo-container">
+                    <input type="file" id="photoUpload2" accept="image/*" onchange="previewImage(event, 2)">
+                    <img id="preview2" src="image/441155001_805973441594201_425577782200385832_n.jpg" alt="Photo 2">
+                </div>
+                <div class="photo-container">
+                    <input type="file" id="photoUpload3" accept="image/*" onchange="previewImage(event, 3)">
+                    <img id="preview3" src="image/441239481_422599530624175_3319276448138549270_n.jpg" alt="Photo 3">
+                </div>
+            </div>
+            <button onclick="nextPage(13)">Next</button>
+        </div>
+
+        <!-- Page 13: What I Love About You -->
+        <div id="page13" class="page">
+            <h1>What I Love About You 💖</h1>
+            <div class="scrollable-box">
+                <ul>
+                    <li>1. Your beautiful smile.</li>
+                    <li>2. The way your eyes light up when you're happy.</li>
+                    <li>3. Your passion for life.</li>
+                    <li>4. How you always know how to make me laugh.</li>
+                    <li>5. Your kindness towards everyone.</li>
+                    <li>6. The way you care about others.</li>
+                    <li>7. Your intelligence and wisdom.</li>
+                    <li>8. Your sense of humor.</li>
+                    <li>9. The way you make me feel special.</li>
+                    <li>10. Your confidence.</li>
+                    <li>11. Your creativity.</li>
+                    <li>12. The way you inspire me to be better.</li>
+                    <li>13. Your positive attitude.</li>
+                    <li>14. Your beautiful hair.</li>
+                    <li>15. The way you smell.</li>
+                    <li>16. Your soft hands.</li>
+                    <li>17. Your warm hugs.</li>
+                    <li>18. The sound of your voice.</li>
+                    <li>19. Your laugh.</li>
+                    <li>20. Your sense of style.</li>
+                    <li>21. Your determination.</li>
+                    <li>22. Your patience.</li>
+                    <li>23. The way you listen to me.</li>
+                    <li>24. Your honesty.</li>
+                    <li>25. Your loyalty.</li>
+                    <li>26. Your beautiful lips.</li>
+                    <li>27. Your cute nose.</li>
+                    <li>28. Your radiant skin.</li>
+                    <li>29. Your graceful walk.</li>
+                    <li>30. Your elegant posture.</li>
+                    <li>31. Your love for adventure.</li>
+                    <li>32. Your ability to make me feel calm.</li>
+                    <li>33. Your thoughtfulness.</li>
+                    <li>34. Your generosity.</li>
+                    <li>35. Your beautiful heart.</li>
+                    <li>36. Your strength.</li>
+                    <li>37. Your resilience.</li>
+                    <li>38. Your optimism.</li>
+                    <li>39. Your love for learning.</li>
+                    <li>40. Your beautiful soul.</li>
+                    <li>41. Your ability to forgive.</li>
+                    <li>42. Your love for family.</li>
+                    <li>43. Your love for animals.</li>
+                    <li>44. Your beautiful smile.</li>
+                    <li>45. Your sense of adventure.</li>
+                    <li>46. Your love for nature.</li>
+                    <li>47. Your beautiful eyes.</li>
+                    <li>48. Your love for music.</li>
+                    <li>49. Your love for art.</li>
+                    <li>50. Your love for books.</li>
+                    <li>51. Your love for travel.</li>
+                    <li>52. Your love for food.</li>
+                    <li>53. Your love for movies.</li>
+                    <li>54. Your love for dancing.</li>
+                    <li>55. Your love for singing.</li>
+                    <li>56. Your love for photography.</li>
+                    <li>57. Your love for writing.</li>
+                    <li>58. Your love for fashion.</li>
+                    <li>59. Your love for fitness.</li>
+                    <li>60. Your love for cooking.</li>
+                    <li>61. Your love for gardening.</li>
+                    <li>62. Your love for animals.</li>
+                    <li>63. Your love for helping others.</li>
+                    <li>64. Your love for teaching.</li>
+                    <li>65. Your love for learning.</li>
+                    <li>66. Your love for exploring.</li>
+                    <li>67. Your love for challenges.</li>
+                    <li>68. Your love for growth.</li>
+                    <li>69. Your love for self-improvement.</li>
+                    <li>70. Your love for giving.</li>
+                    <li>71. Your love for sharing.</li>
+                    <li>72. Your love for caring.</li>
+                    <li>73. Your love for understanding.</li>
+                    <li>74. Your love for patience.</li>
+                    <li>75. Your love for kindness.</li>
+                    <li>76. Your love for compassion.</li>
+                    <li>77. Your love for empathy.</li>
+                    <li>78. Your love for forgiveness.</li>
+                    <li>79. Your love for honesty.</li>
+                    <li>80. Your love for loyalty.</li>
+                    <li>81. Your love for trust.</li>
+                    <li>82. Your love for respect.</li>
+                    <li>83. Your love for communication.</li>
+                    <li>84. Your love for teamwork.</li>
+                    <li>85. Your love for collaboration.</li>
+                    <li>86. Your love for creativity.</li>
+                    <li>87. Your love for innovation.</li>
+                    <li>88. Your love for problem-solving.</li>
+                    <li>89. Your love for challenges.</li>
+                    <li>90. Your love for growth.</li>
+                    <li>91. Your love for self-improvement.</li>
+                    <li>92. Your love for giving.</li>
+                    <li>93. Your love for sharing.</li>
+                    <li>94. Your love for caring.</li>
+                    <li>95. Your love for understanding.</li>
+                    <li>96. Your love for patience.</li>
+                    <li>97. Your love for kindness.</li>
+                    <li>98. Your love for compassion.</li>
+                    <li>99. Your love for empathy.</li>
+                    <li>100. Your love for me.</li>
+                </ul>
+            </div>
+            <button onclick="nextPage(14)">Next</button>
+        </div>
+
+        <!-- Page 14: Final Page -->
+        <div id="page14" class="page">
+            <h1>Thank you for being my Valentine! 💖</h1>
+            <p>I love you more than anything in this world!</p>
+            <img src="https://i.pinimg.com/736x/22/13/10/2213106e61d79365ad3b0e499a7773f9.jpg" alt="Cute Cat" class="cat-image">
+        </div>
+    </div>
+
+    <!-- Confetti Effect -->
+    <canvas id="confetti"></canvas>
+
+    <!-- Sound Effects -->
+    <audio id="denySound" src="https://www.soundjay.com/buttons/sounds/button-10.mp3"></audio>
+    <audio id="yesSound" src="https://www.soundjay.com/buttons/sounds/button-3.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
